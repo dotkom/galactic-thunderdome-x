@@ -7,10 +7,12 @@ const getButtonColors = (variant: string) => {
     "&:hover": {
       bg: `${variant}.4`,
       transform: "translateY(-1px)",
+      boxShadow: "high",
     },
     "&:active": {
       bg: `${variant}.5`,
       transform: "translateY(2px)",
+      boxShadow: "low",
     },
   };
 };
@@ -20,6 +22,7 @@ const buttons: Theme["buttons"] = {
     borderRadius: "4px",
     transition: "0.2s ease-in-out",
     cursor: "pointer",
+    boxShadow: "medium",
   },
   blue: getButtonColors("blue"),
   orange: getButtonColors("orange"),

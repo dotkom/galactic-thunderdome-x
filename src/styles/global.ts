@@ -12,6 +12,7 @@ const globalStyles: Theme["styles"] = {
     fontFamily: "body",
     lineHeight: "body",
     fontWeight: "body",
+    "--shadow-color": "0deg 0% 71%",
   },
   h1: {
     color: "text",
