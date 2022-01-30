@@ -1,7 +1,7 @@
 import { styled } from "@stitches/theme";
 
 const Button = styled("button", {
-  backgroundColor: "$blue5",
+  backgroundColor: "$blue3",
   border: "none",
   borderRadius: "4px",
   color: "$white",
@@ -13,18 +13,18 @@ const Button = styled("button", {
   transition: "0.2s ease-in-out",
   "&:hover": {
     transform: "translateY(-1px)",
-    backgroundColor: "$blue6",
+    backgroundColor: "$blue4",
   },
   "&:active": {
     transform: "translateY(2px)",
-    backgroundColor: "$blue7",
+    backgroundColor: "$blue5",
   },
   variants: {
     color: {
       green: {
-        backgroundColor: "$green5",
-        "&:hover": { backgroundColor: "$green6" },
-        "&:active": { backgroundColor: "$green7" },
+        backgroundColor: "$green3",
+        "&:hover": { backgroundColor: "$green4" },
+        "&:active": { backgroundColor: "$green5" },
       },
       red: {
         backgroundColor: "$red5",
