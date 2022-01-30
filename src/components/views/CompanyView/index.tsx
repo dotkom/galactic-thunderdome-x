@@ -1,3 +1,4 @@
+import Footer from "@components/organisms/Footer";
 import { BlockContentProps } from "@sanity/block-content-to-react";
 import React, { FC } from "react";
 import { Box } from "theme-ui";
@@ -27,6 +28,7 @@ export const CompanyView: FC<CompanyViewProps> = (props: CompanyViewProps) => {
       <CompanyMap />
       <CompanyInfo content={info.content} />
       <CompanyMore content={additional.content} />
+      <Footer />
     </Box>
   );
 };

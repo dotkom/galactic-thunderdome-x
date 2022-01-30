@@ -11,6 +11,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
   const data = await fetchCompanySectionData();
   return { props: { sections: data } };
 };
+
 const Company: FC<CompanyProps> = (props: CompanyProps) => {
   return <CompanyView companyContent={props.sections} />;
 };
