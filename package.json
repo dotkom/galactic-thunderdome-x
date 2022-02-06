@@ -10,14 +10,17 @@
         "build-storybook": "build-storybook",
         "lint": "eslint '**/*.{js,jsx,ts,tsx}'",
         "format-check": "prettier --check '**/*.{js,jsx,ts,tsx}'",
-        "format": "prettier --write '**/*.{js,jsx,ts,tsx}'"
+        "format": "prettier --write '**/*.{js,jsx,ts,tsx}'",
+        "gen": "graphql-codegen --config codegen.yml"
     },
     "dependencies": {
+        "@graphql-codegen/cli": "^2.5.0",
         "@sanity/block-content-to-react": "^3.0.0",
         "@sanity/client": "^2.21.10",
         "@stitches/react": "^1.2.6",
         "@theme-ui/color": "^0.12.0",
         "axios": "^0.21.1",
+        "graphql": "^16.3.0",
         "next": "^12.0.1",
         "next-compose-plugins": "^2.2.1",
         "prettier": "^2.4.1",
@@ -27,6 +30,11 @@
         "theme-ui": "^0.12.0"
     },
     "devDependencies": {
+        "@graphql-codegen/cli": "2.5.0",
+        "@graphql-codegen/introspection": "2.1.1",
+        "@graphql-codegen/typescript": "2.4.3",
+        "@graphql-codegen/typescript-graphql-files-modules": "2.1.1",
+        "@graphql-codegen/typescript-operations": "2.2.4",
         "@storybook/addon-actions": "^6.1.14",
         "@storybook/addon-essentials": "^6.1.14",
         "@storybook/addon-knobs": "^6.1.14",
