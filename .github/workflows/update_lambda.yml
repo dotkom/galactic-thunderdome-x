@@ -1,0 +1,26 @@
+name: "Deploy to lambda mailer"
+on: 
+  workflow_dispatch:
+  push:
+    paths:
+      - "apps/mailer/*"
+    branches:
+      - 'master'
+jobs:
+  deploy_source:
+    name: Deploy lambda from source file
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout source code
+        uses: actions/checkout@v1
+      - run: yarn
+      - run: yarn build
+        working-directory: apps/mailer
+      - name: default deploy
+        uses: appleboy/lambda-action@master
+        with:
+          aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws_region: ${{ secrets.AWS_REGION }}
+          function_name: gtx-mail-handler
+          source: apps/mailer/dist/lambda.js
